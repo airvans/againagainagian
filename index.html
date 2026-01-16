@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Lora:ital,wght@1,400..700&display=swap"
+    rel="stylesheet" />
+    <title>moblvdev</title>
+  </head>
+  <style>
+  .lora-111 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #section-home {
+    animation: czyrink auto linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 95%;
+    /* transform-origin: center 280px ; in case i change srink to scale*/
+  }
+
+  #blocker {
+    animation: cloudblocker auto ease-in forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 95%;
+  }
+
+  #section-tv {
+    animation: hiddentv auto linear;
+    animation-timeline: scroll();
+  }
+
+  #tvimage {
+    animation: grow auto linear;
+    animation-timeline: scroll();
+    animation-range: 95% 100%;
+  }
+
+  @supports not (animation-timeline: scroll()) {
+    .simpsons {
+      animation: opening-gag 1s ease-in 1 1s forwards;
+    }
+  }
+
+  @keyframes opening-gag {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(300px);
+    }
+  }
+
+  @keyframes cloudblocker {
+    0% {
+      background-position: top;
+      transform: translateY(300px);
+    }
+
+    20% {
+      background-position: bottom;
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateY(-50px);
+      background-position: bottom;
+    }
+  }
+
+  @keyframes czyrink {
+    0% {}
+
+    10% {
+      border-radius: 20px;
+    }
+
+    100% {
+      height: 0px;
+      width: 0px;
+      top: 280px;
+      border-radius: 50px;
+      background-position: bottom;
+    }
+  }
+
+  @keyframes hiddentv {
+    15% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+      border-radius: 80px;
+    }
+
+    99% {
+      transform: scale(1, 1);
+      opacity: 1;
+      border-radius: 80px;
+    }
+
+    100% {
+      transform: scale(1, 1);
+      opacity: 1;
+      border-radius: 0px;
+    }
+  }
+
+  /* The switch - the box around the slider */
+
+  #slider {
+    background-color: #ccc;
+    border-radius: 30px;
+    -webkit-animation: 0.4s;
+    animation: 0.4s;
+  }
+
+  #another {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  #another::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("./src/assets/svgviewer-output-2.svg") center/contain no-repeat;
+  }
+
+  #slidecheck:checked+#slider {
+    background-color: oklch(60.9% 0.126 221.723);
+  }
+
+  #slidecheck:checked~#another {
+    transform: translateX(30px) translateY(-50%);
+  }
+
+  #slidecheck:checked~#another::before {
+    background: url("./src/assets/svgviewer-output.svg") center/contain no-repeat;
+  }
+</style>
+  <body>
+  <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
+    0%
+  </div>
+  <div id="navbar"
+    class="text-gray-800/80 absolute h-9 w-110 bg-white/10 backdrop-blur-md backdrop-grayscale-20 shadow-sm rounded-3xl top-10 left-[50%] -translate-x-[51.6%] z-3 flex justify-between items-center py-1 pl-5 pr-2">
+    <a href="/Ads&thoughts.html">
+      <div id="logo"
+        class="size-6 cursor-default bg-[url(assets/skyman.svg)] bg-center bg-no-repeat bg-contain rotate-10"></div>
+    </a>
+    <ul class="flex gap-5 text-xs font-[Epilogue]">
+      <li><a href="/index.html" class="hover:text-gray-800">Home</a></li>
+      <li>
+        <a href="./projects.html" class="hover:text-gray-800">Projects</a>
+      </li>
+      <li><a href="/changelog.html" class="hover:text-gray-800">Logs</a></li>
+    </ul>
+    <label class="switch relative inline-block w-15 h-7">
+      <input id="slidecheck" type="checkbox" class="opacity-0 w-0 h-0" />
+      <span id="slider" class="absolute top-0 left-0 right-0 bottom-0 inset-shadow-sm"></span>
+      <div id="another"></div>
+    </label>
+  </div>
+
+  <div id="helper-object"
+    class="text-gray-800/80 absolute bottom-5 left-[50%] -translate-x-[50%] z-3 text-sm animate-bounce jersey-10-regular">
+    <span class="mr-2"> ↓ </span> Scroll down
+  </div>
+
+  <div id="main" class="h-screen w-screen bg-gray-100 overflow-y-scroll overflow-clip font-[Epilogue]">
+    <div id="section-home"
+      class="z-1 bg-[url(./assets/background-v3.png)] bg-size-[100vw] bg-position-[bottom_99%_right_50%] h-screen w-full sticky top-0 m-auto overflow-clip">
+      <div id="inner"
+        class="h-screen w-screen flex flex-col justify-center text-center text-white/80 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <p class="text-2xl font-extrabold mb-4">
+          Hi, I'm <span class="lora-111">Evan</span>
+        </p>
+        <p class="text-6xl/17 font-extrabold">I build things for the web</p>
+        <p class="text-lg font-light mt-5">
+          I'm a full-stack developer, blending logic and artistry to conjure
+          <br />
+          digital experiences that captivate and inspire
+        </p>
+      </div>
+      <div id="blocker"
+        class="bg-[url(./assets/cloudblocker.png)] simpsons absolute w-screen h-screen bg-cover top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]">
+      </div>
+    </div>
+
+    <div id="section-tv" class="h-100 sticky top-25 opacity-0">
+      <iframe id="tvimage" src="" title="damn life so easy " frameborder="0"
+        class="absolute h-55 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 opacity-0"></iframe>
+      <img id="oldtv" src="./src/assets/result.png" alt="old_tv" class="h-100 m-auto translate-x-1" />
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[27.5%] opacity-0"></div>
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[37.5%] opacity-0"></div>
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[47.5%] opacity-0"></div>
+    </div>
+
+    <div id="scroller" class="h-800 w-1 bg-linear-to-b from-purple-700 to-blue-300 opacity-0"></div>
+
+    <div id="section-hand" class="h-80 w-80 overflow-clip translate-x-[calc(100vw-337px)]">
+      <img id="myhand" src="./src/assets/ezgifbase.png" alt="my-beautiful-hands"
+        class="absolute -top-20 -left-5 -rotate-32" />
+    </div>
+    <audio id="audio" src="./src/assets/notification-alert-9-331720.mp3" muted></audio>
+  </div>
+  <script type="module" src="./src/!hackton.js"></script>
+  <script type="module" src="./src/!popups.js"></script>
+</body>
+</html>

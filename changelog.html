@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="assets/underconstruction-mini.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/extra.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Lora:ital,wght@1,400..700&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body class="bg-gray-100 ">
+
+  <div id="navbar"
+    class="text-gray-800/80 sticky h-9 w-110 bg-white/10 backdrop-blur-md backdrop-grayscale-20 shadow-sm rounded-3xl top-10 left-[50%] -translate-x-[50%] z-3 flex justify-between items-center py-1 pl-5 pr-2">
+    <a href="/Ads&thoughts.html">
+      <div id="logo"
+        class="size-6 cursor-default bg-[url(./src/assets/skyman.svg)] bg-center bg-no-repeat bg-contain rotate-10"></div>
+    </a>
+    <ul class="flex gap-5 text-xs font-[Epilogue]">
+      <li><a href="/1hackton.html" class=" hover:text-gray-800">Home</a></li>
+      <li><a href="/projects.html" class=" hover:text-gray-800">Projects</a></li>
+      <li><a href="/changelog.html" class="hover:text-gray-800">Logs</a></li>
+    </ul>
+    <label class="switch relative inline-block w-15 h-7">
+      <input id="slidecheck" type="checkbox" class="opacity-0 w-0 h-0">
+      <span id="slider" class="absolute top-0 left-0 right-0 bottom-0 inset-shadow-sm"></span>
+      <div id="another"></div>
+    </label>
+  </div>
+  <!-------------------------------- main content ----------------------->
+  <div class="h-120 w-300 mt-22 mx-auto rounded-2xl bg-cyan-600 "></div>
+
+  <div class="mx-auto w-300 mt-2 mb-2 flex justify-center">
+
+    <div id="sidebar" class="w-50 h-100 bg bg-cyan-600/90 sticky top-20 rounded-lg p-1">
+
+      <div class="h-11 w-full  bg-white/20 rounded-t-md flex items-center mb-1 pl-3">
+        <span class="font-[Epilogue] font-semibold text-2xl text-gray-100">FILTERS</span>
+      </div>
+
+      <div id="filterslist" class="w-full h-90 flex flex-col gap-1 text-gray-100">
+        <button
+          class="w-full  active:scale-97 hover:bg-white/20 rounded-sm py-2 text-sm  font-medium text-left pl-3">IT-SELF</button>
+        <button
+          class="w-full  active:scale-97 hover:bg-white/20 rounded-sm py-2 text-sm  font-medium text-left pl-3">THE
+          CRUSHING</button>
+
+      </div>
+
+    </div>
+
+    <div id="issueslist" class="w-250 rounded-2xl p-2 mb-9.5">
+
+      <div id="issue-group" class="mb-15">
+
+        <div id="item-header"
+          class="h-10 w-full border-b border-gray-400 text-gray-800/80 flex items-center px-3 mb-0.5">
+          <span class="font-[Epilogue] font-semibold text-lg">IT-SELF : <span class="text-xs">Issues &
+              tasks</span></span>
+        </div>
+
+        <div id="item-container" class="bg-cyan-600/20 rounded-xs">
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80 ">
+            <section class="">
+              <p class="font-semibold text-gray-800">Add micro-interations</p>
+              <p class="text-xs text-gray-600">add little popping or movement animation to pages and elements</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80 ">
+            <section class="">
+              <p class="font-semibold text-gray-800">Add a tagging to items</p>
+              <p class="text-xs text-gray-600">add tags for each item in issues list like "to-do" "definitely not"</p>
+            </section>
+          </div>
+            <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80 ">
+            <section class="">
+              <p class="font-semibold text-gray-800">Make a error page</p>
+              <p class="text-xs text-gray-600">page a page not found that will be navigator too in case of an error</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Create and place videos for intro</p>
+              <p class="text-xs text-gray-600">for pages with space for intro video create one and add it</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Change Name in home page</p>
+              <p class="text-xs text-gray-600">change the Evan name in the home page to 💨🚚 get it, like like "air + van" </p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Make the filter side nav work</p>
+              <p class="text-xs text-gray-600">add code to make the filter side nav work so when clicked goes to related
+                task</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Make issue list dynamic</p>
+              <p class="text-xs text-gray-600">use a db or something to pull list of issues/task for log page</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Add more button to issues/task</p>
+              <p class="text-xs text-gray-600">add a where more details can be viewed for each item - make on hover
+                visible</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Try view transitions</p>
+              <p class="text-xs text-gray-600">check out using view transitions for like more details or view expanding
+              </p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Make site responsive</p>
+              <p class="text-xs text-gray-600">make the site responsive for all screen sizes, it literally breaks my heart when I inspect</p>
+            </section>
+          </div>
+           <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Fix Footer</p>
+              <p class="text-xs text-gray-600">that thing be floating on larger screens</p>
+            </section>
+          </div>
+           <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Add opacity check for inspector </p>
+              <p class="text-xs text-gray-600">add a check for 100 opacity before granting inspector, nahh too lazy </p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Pseudo 3d for tv in home</p>
+              <p class="text-xs text-gray-600">change to image in home to kinda be 3d object </p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Fix centering in general</p>
+              <p class="text-xs text-gray-600">fix all the places that I am pretending are centered - "scroll up"
+                "navbar in homepage" others</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Color & theme</p>
+              <p class="text-xs text-gray-600">do i want this, maybe change later</p>
+            </section>
+          </div>
+
+          <div id="item-achievement" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Check for achievement</p>
+              <p class="text-xs text-gray-600">Check this for an achievement</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">More sounds and fix </p>
+              <p class="text-xs text-gray-600">on multi click sound breaks and add more sound else mute button becomes
+                an ornament</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Add "him" to video</p>
+              <p class="text-xs text-gray-600">the goal was to add a "him" to the video do just that</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Make buttons clickable </p>
+              <p class="text-xs text-gray-600">generally make the buttons clickable or go somewhere or worse just add
+                feedback that you tried</p>
+            </section>
+          </div>
+
+           <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Add the remove me achievement </p>
+              <p class="text-xs text-gray-600">add the moment dont think this will work yet</p>
+            </section>
+          </div>
+
+             <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Add flip section achievement </p>
+              <p class="text-xs text-gray-600">doing clean up no time yet</p>
+            </section>
+          </div>
+
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Idle links and button</p>
+              <p class="text-xs text-gray-600">guess this hasnt been brought up before</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">More content for tv</p>
+              <p class="text-xs text-gray-600">Add lots more content to tv</p>
+            </section>
+          </div>
+
+          <div id="item" class="flex items-center gap-5 p-1  pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">More skyman</p>
+              <p class="text-xs text-gray-600">add skyman in random place with random poses</p>
+            </section>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="issue-group" class="mb-15">
+
+        <div id="item-header"
+          class="h-10 w-full border-b border-gray-400 text-gray-800/80 flex items-center px-3 mb-0.5">
+          <span class="font-[Epilogue] font-semibold text-lg">The CRUSHING : <span class="text-xs">Just
+              tasks</span></span>
+        </div>
+
+        <div id="item-container" class="bg-cyan-600/20 rounded-xs">
+
+          <div id="item" class="flex items-center gap-5 p-1 pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Sketch up samples</p>
+              <p class="text-xs text-gray-600">draw up some samples to map out idea</p>
+            </section>
+          </div>
+          <div id="item" class="flex items-center gap-5 p-1 pl-3 border-b border-white/20 hover:border-white">
+            <input type="checkbox" name="" id="" disabled class="size-6 accent-cyan-600/80">
+            <section>
+              <p class="font-semibold text-gray-800">Start</p>
+              <p class="text-xs text-gray-600">try tools and start to implement</p>
+            </section>
+          </div>
+
+          
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-------------------------------- main content ----------------------->
+  <footer
+    class="font-[Epilogue] w-300 mx-auto mb-2 bg-cyan-600 rounded-b-lg p-2 pb-0 flex justify-between items-end overflow-clip overflow-y-clip">
+    <p class="text-9xl font-extrabold translate-y-13 text-gray-100 tracking-tight">THE END</p>
+    <section class="text-right pb-2 align-bottom text-xs text-white/70 relative">
+      <div class="absolute border-t w-16 -top-4.5 right-0"></div>
+      <div class="absolute border-t w-305 -top-17 -left-235"></div>
+      <img src="./src/assets/skyman-sit.svg" alt="" class="size-7 absolute -top-9 right-0">
+      <p>Made with by mobleveldev</p>
+      <p><a href="mailto:" class="hover:text-gray-50">Contact Me</a> <a href="" class="hover:text-gray-50">. Github</a>
+        <a href="" class="hover:text-gray-50">. Meow</a></p>
+      <p>Copyright © 2025 All rights belong to creator.</p>
+    </section>
+  </footer>
+
+  <script type="module" src="./src/!popups.js"></script>
+
+</body>
+
+</html>
