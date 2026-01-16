@@ -69,7 +69,7 @@ export class TVController {
 
 export class Hands{
    constructor(handsElement) {
-      this.base = `assets/ezgifbase.png`;
+      this.base = `./src/assets/ezgifbase.png`;
       this.handsElement = handsElement;
       this.clear = null;
    }

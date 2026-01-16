@@ -1,0 +1,55 @@
+.lora-111 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+   #slider {
+    background-color: #ccc;
+    border-radius: 30px;
+    -webkit-animation: 0.4s;
+    animation: 0.4s;
+  }
+
+  #another {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  #another::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("/svgviewer-output-2.svg") center/contain no-repeat;
+  }
+
+  #slidecheck:checked+#slider {
+    background-color: oklch(60.9% 0.126 221.723) ;
+  }
+
+  #slidecheck:checked~#another {
+    transform: translateX(30px) translateY(-50%);
+  }
+
+  #slidecheck:checked~#another::before {
+    background: url("/svgviewer-output.svg")center/contain no-repeat;
+  }

@@ -8,7 +8,7 @@ const home = document.getElementById("section-home")
 const animationtracker = home.getAnimations()
 const tvimage = document.getElementById("tvimage")
 const tvsection = document.getElementById("section-tv")
-const channellist = ["http://127.0.0.1:5500/thirdtry.html", "assets/history.gif", "assets/chred.gif"]
+const channellist = ["http://127.0.0.1:5500/thirdtry.html", "./src/assets/history.gif", "./src/assets/chred.gif"]
 const beautifulhands = document.getElementById("myhand")
 const audio = document.getElementById("audio")
 const makesomenoice = document.querySelectorAll(".makesomenoice");
@@ -34,24 +34,24 @@ document.addEventListener("keydown", (e) => {
    if (action) {
       switch (action) {
          case "up":
-            hands.click("assets/ezgifup.gif");
+            hands.click("./src/assets/ezgifup.gif");
             tvcontroller.zoomUP();
             break;
          case "down":
-            hands.click("assets/ezgifdown.gif");
+            hands.click("./src/assets/ezgifdown.gif");
             tvcontroller.zoomDOWN();
             break;
          case "left":
-            hands.click("assets/ezgifleft.gif");
+            hands.click("./src/assets/ezgifleft.gif");
             tvcontroller.channelchanger(-1);
             break;
          case "right":
-            hands.click("assets/ezgifright.gif");
+            hands.click("./src/assets/ezgifright.gif");
             tvcontroller.channelchanger(1);
             break;
          case "active":
-            hands.click("assets/ezgifactive.gif");
-            playsound("assets/tvon.mp3");
+            hands.click("./src/assets/ezgifactive.gif");
+            playsound("./src/assets/tvon.mp3");
             if (tvcontroller.isON) {
                tvcontroller.turnOff();
             } else {
