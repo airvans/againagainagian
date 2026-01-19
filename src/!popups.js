@@ -18,6 +18,9 @@ if (checkedpopup) {
 
 window.dotheshuffle = dotheshuffle;
 window.doacheck = doacheck;
+window.Randomdraw = Randomdraw;
+
+
 
 
 function dotheshuffle() {
@@ -57,7 +60,7 @@ function doacheck() {
     .trim()
     .replaceAll(" ", "");
   const name = "Guess your right";
-  const text = "You know your stuff huh?";
+  const text = "You know your stuff";
 
   if (input == "champagnecoast" && !popupset.has(name)) {
     showachievement(name, text, "assets/achievements/namechecker.png");
@@ -65,13 +68,27 @@ function doacheck() {
   }
 }
 
-showachievement(null, null, null)
+const node = document.getElementById("test1")
+
+
+showachievement("Testing", "Congratulation_you_did_right", null)
 
 function showachievement(name, text, img) {
+
   Toastify({
-    text: `This is a toast ${name}`,
-    duration: 3000,
+    text:`${name}\n`,
+    duration: 13000,
+    stopOnFocus: true,
+    avatar:'src/assets/skyman-sit.svg',
+    className:`text-xs br after:content-['${text}'] after:text-gray-800 after:text-sm after:font-light`,
+    style:{
+      background: "white",
+      width: "350px",
+      height: "60px",
+      color: "gray",
+    }
   }).showToast();
+
 }
 
 function addachievement(name) {
