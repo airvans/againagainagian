@@ -3,6 +3,7 @@ import "toastify-js/src/toastify.css"
 import confetti from 'canvas-confetti'
 
 let interval = null;
+let cap = null;
 const audio = document.getElementById("audio")
 const muteagent = document.getElementById("slidecheck")
 
@@ -77,13 +78,13 @@ function doacheck() {
 
 
 
-showachievement("Testing", "Congratulation you did right", "assets/skyman-sit.svg")
+
 
 function showachievement(name, text, img) {
 
   Toastify({
     text:`${name}\n`,
-    duration: 3000,
+    duration: 4000,
     stopOnFocus: true,
     className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:border before:absolute after:text-gray-800 after:text-sm after:font-light`,
     style:{
@@ -104,6 +105,7 @@ function showachievement(name, text, img) {
 
   blackbackground();
   triggerConfetti();
+  playsound("./src/assets/1gift-confetti-447240.mp3")
 }
 
 function triggerConfetti() {
@@ -131,7 +133,7 @@ function blackbackground() {
 
     interval =setTimeout(() => {
       document.body.removeChild(back);
-    },3000);
+    },4000);
 }
 
 function addachievement(name) {
@@ -150,6 +152,17 @@ function overachiever() {
 }
 
 function playsound(src) {
+
+   //if (muteagent.checked == false) return;
+
+   //clearTimeout(cap);
+
    audio.src = src;
    audio.play();
+
+  //  cap = setTimeout(() => {
+  //    audio.pause();
+  //    audio.currentTime = 0;
+  //  }, 3000);
+
 }
