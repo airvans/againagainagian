@@ -3,6 +3,9 @@ import "toastify-js/src/toastify.css"
 import confetti from 'canvas-confetti'
 
 let interval = null;
+const audio = document.getElementById("audio")
+const muteagent = document.getElementById("slidecheck")
+
 
 const checkedpopup = document
   .getElementById("item-achievement")
@@ -23,7 +26,9 @@ window.doacheck = doacheck;
 window.Randomdraw = Randomdraw;
 
 
-
+muteagent.addEventListener("change", (e) => {
+   audio.muted = !e.target.checked
+})
 
 function dotheshuffle() {
   const name = "inspector";
@@ -142,4 +147,9 @@ function overachiever() {
     showachievement(finalname, finaltext, "assets/achievements/master.png");
     addachievement(finalname);
   }
+}
+
+function playsound(src) {
+   audio.src = src;
+   audio.play();
 }
