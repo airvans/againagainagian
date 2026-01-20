@@ -1,6 +1,8 @@
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
+import confetti from 'canvas-confetti'
 
+let interval = null;
 
 const checkedpopup = document
   .getElementById("item-achievement")
@@ -76,7 +78,7 @@ function showachievement(name, text, img) {
 
   Toastify({
     text:`${name}\n`,
-    duration: 33000,
+    duration: 3000,
     stopOnFocus: true,
     className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:border before:absolute after:text-gray-800 after:text-sm after:font-light`,
     style:{
@@ -95,6 +97,36 @@ function showachievement(name, text, img) {
     }
   }
 
+  blackbackground();
+  triggerConfetti();
+}
+
+function triggerConfetti() {
+  confetti({
+    particleCount: 100,
+    spread: 170,
+    origin: { y: 0.6 }
+  });
+}
+
+function blackbackground() {
+
+    clearInterval(interval);
+
+    const back = document.createElement("div")
+    back.style.position = "fixed";
+    back.style.top = "0";
+    back.style.left = "0";
+    back.style.width = "100%";
+    back.style.height = "100%";
+    back.style.backgroundColor = "black";
+    back.style.zIndex = "9999";
+    back.style.opacity = "0.3";
+    document.body.appendChild(back);
+
+    interval =setTimeout(() => {
+      document.body.removeChild(back);
+    },3000);
 }
 
 function addachievement(name) {
