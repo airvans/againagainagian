@@ -68,19 +68,17 @@ function doacheck() {
   }
 }
 
-const node = document.getElementById("test1")
 
 
-showachievement("Testing", "Congratulation_you_did_right", null)
+showachievement("Testing", "Congratulation you did right", "assets/skyman-sit.svg")
 
 function showachievement(name, text, img) {
 
   Toastify({
     text:`${name}\n`,
-    duration: 13000,
+    duration: 33000,
     stopOnFocus: true,
-    avatar:'src/assets/skyman-sit.svg',
-    className:`text-xs br after:content-['${text}'] after:text-gray-800 after:text-sm after:font-light`,
+    className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:border before:absolute after:text-gray-800 after:text-sm after:font-light`,
     style:{
       background: "white",
       width: "350px",
@@ -88,6 +86,14 @@ function showachievement(name, text, img) {
       color: "gray",
     }
   }).showToast();
+
+  const toast = document.querySelector('.toastify');
+  if (toast) {
+    toast.style.setProperty('--toast-text', `'${text}'`);
+     if (img) {
+      toast.style.setProperty('--toast-image', `url('${img}')`);
+    }
+  }
 
 }
 

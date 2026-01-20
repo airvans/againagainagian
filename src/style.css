@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.toastify::after {
+  content: var(--toast-text);
+}
+.toastify::before{
+  background-image: var(--toast-image);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
