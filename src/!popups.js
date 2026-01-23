@@ -25,6 +25,8 @@ if (checkedpopup) {
 window.dotheshuffle = dotheshuffle;
 window.doacheck = doacheck;
 window.Randomdraw = Randomdraw;
+window.checkmark = checkmark;
+
 
 
 muteagent.addEventListener("change", (e) => {
@@ -36,7 +38,7 @@ function dotheshuffle() {
   const text = "found a probable feature 🎉";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/achievements/inspector.png");
+    showachievement(name, text, "assets/inspector.png");
     addachievement(name);
   }
 }
@@ -46,7 +48,7 @@ function Randomdraw() {
   const text = "you waited or where lucky to get this";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/achievements/patience.png");
+    showachievement(name, text, "assets/lucky.png");
     addachievement(name);
   }
 }
@@ -56,7 +58,7 @@ function checkmark() {
   const text = "guess you like to break rules huh";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/achievements/rulechanger.png");
+    showachievement(name, text, "assets/changer.png");
     addachievement(name);
   }
 }
@@ -71,7 +73,7 @@ function doacheck() {
   const text = "You know your stuff";
 
   if (input == "champagnecoast" && !popupset.has(name)) {
-    showachievement(name, text, "assets/achievements/namechecker.png");
+    showachievement(name, text, "assets/guessright.png");
     addachievement(name);
   }
 }
@@ -86,7 +88,7 @@ function showachievement(name, text, img) {
     text:`${name}\n`,
     duration: 4000,
     stopOnFocus: true,
-    className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:border before:absolute after:text-gray-800 after:text-sm after:font-light`,
+    className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:absolute after:text-gray-800 after:text-sm after:font-light`,
     style:{
       background: "white",
       width: "350px",
@@ -143,12 +145,17 @@ function addachievement(name) {
 }
 
 function overachiever() {
-  if (popupset.size == 4) {
-    const finalname = "overachiever";
-    const finaltext = "The end doesnt detere you";
-    showachievement(finalname, finaltext, "assets/achievements/master.png");
-    addachievement(finalname);
-  }
+
+  if (popupset.size !== 4) return;
+
+  const timeout = setTimeout(()=>{
+     const finalname = "overachiever";
+     const finaltext = "The end doesnt detere you";
+     showachievement(finalname, finaltext, "assets/overachiever.png");
+     addachievement(finalname);
+    
+  }, 5000)
+  
 }
 
 function playsound(src) {
