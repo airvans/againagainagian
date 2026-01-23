@@ -38,28 +38,28 @@ function dotheshuffle() {
   const text = "found a probable feature 🎉";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/inspector.png");
     addachievement(name);
+    showachievement(name, text, "assets/inspector.png");
   }
 }
 
 function Randomdraw() {
   const name = "patience or Lucky";
-  const text = "you waited or where lucky to get this";
+  const text = "you waited or were lucky to get this";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/lucky.png");
     addachievement(name);
+    showachievement(name, text, "assets/lucky.png");
   }
 }
 
 function checkmark() {
   const name = "Rule changer";
-  const text = "guess you like to break rules huh";
+  const text = "you like to break rules huh";
 
   if (!popupset.has(name)) {
-    showachievement(name, text, "assets/changer.png");
     addachievement(name);
+    showachievement(name, text, "assets/changer.png");
   }
 }
 
@@ -73,8 +73,8 @@ function doacheck() {
   const text = "You know your stuff";
 
   if (input == "champagnecoast" && !popupset.has(name)) {
-    showachievement(name, text, "assets/guessright.png");
     addachievement(name);
+    showachievement(name, text, "assets/guessright.png");
   }
 }
 
@@ -133,8 +133,27 @@ function blackbackground() {
     back.style.opacity = "0.3";
     document.body.appendChild(back);
 
+    // Add achievement counter
+    const counter = document.createElement("div");
+    counter.style.position = "fixed";
+    counter.style.top = "50%";
+    counter.style.left = "50%";
+    counter.style.transform = "translate(-50%, -50%)";
+    counter.style.zIndex = "10000";
+    counter.style.fontSize = "48px";
+    counter.style.fontWeight = "bold";
+    counter.style.color = "white";
+    counter.style.fontFamily = "Arial, sans-serif";
+    
+    const currentCount = popupset.size;
+    const maxCount = currentCount < 4 ? 3 : currentCount;
+    counter.textContent = `${currentCount}/${maxCount}`;
+    
+    document.body.appendChild(counter);
+
     interval =setTimeout(() => {
       document.body.removeChild(back);
+      document.body.removeChild(counter);
     },4000);
 }
 
@@ -151,9 +170,9 @@ function overachiever() {
   const timeout = setTimeout(()=>{
      const finalname = "overachiever";
      const finaltext = "The end doesnt detere you";
-     showachievement(finalname, finaltext, "assets/overachiever.png");
      addachievement(finalname);
-    
+     showachievement(finalname, finaltext, "assets/overachiever.png");
+       
   }, 5000)
   
 }
