@@ -33,9 +33,21 @@
     </label>
   </div>
   <!-------------------------------- main content ----------------------->
-  <div class="h-120 w-300 mt-22 mx-auto rounded-2xl bg-cyan-600 "></div>
 
-  <div class="mx-auto w-300 mt-2 mb-2 flex justify-center">
+  <div class="h-120 w-300 mt-22 mx-auto rounded-2xl overflow-clip">
+    <video autoplay muted playsinline class="-translate-y-25">
+      <source 
+        src="src/assets/test2.webm" 
+        type="video/webm">
+      <source 
+        src="src/assets/test2.mp4" 
+        type='video/mp4; codecs="hvc1"'>
+  </video>
+  </div>
+
+ 
+
+  <div class="mx-auto w-300 mt-8 mb-2 flex justify-center">
 
     <div id="sidebar" class="w-50 h-100 bg bg-cyan-600/90 sticky top-20 rounded-lg p-1">
 
@@ -301,6 +313,7 @@
     </div>
 
   </div>
+
   <audio id="audio" src="./src/assets/notification-alert-9-331720.mp3" muted></audio>
 
 
