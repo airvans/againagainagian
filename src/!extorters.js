@@ -88,10 +88,11 @@ export class Hands{
 }
 
 
-export const funfact = ["do you know? the first website is still online", "I love building interactive web experiences",
-      "I code in JavaScript, Python, and a bit of Rust", "There are a couple more secrets hiding around this website! To find them, don't ask questions","I could have done a simpson's with the cloud you know",
-      "Fun fact: I once built a robot that can solve a Rubik's cube", "I believe in clean code and good design",
-      "I'm passionate about open-source projects and collaboration", "do you know you are a bitch", "In the life I belive I am too competitive",`<span class='cursor-pointer' onclick='Randomdraw()'>click here for an achievement</span>`
+export const funfact = ["Um, um um (frustrated tongue click), um - how the f**k do you spell ****bleep bleep****", `I love building interactive web experiences <span class="text-red-500 opacity-0 hover:opacity-100">(bullsh*t)</span>`,
+      "I code in JavaScript and C# but I am bit of rust(y) . \n ps I do not know rust", "There are a couple more secrets hiding around this website! To find them, be patient or lucky","I could have done a simpson's with the cloud's you know",
+      `Man, shut up, man | You're trying to trick me, man | Put smoke into my friggin' head and sh*t, man | Man, I don't know what to think no more, man | #gun click# | I don't know what to think |
+      no more man | Get out of my head! (x3)`, "Perfection is the enemy of progress (will remove this one later)", "I am not a TV, I am a metaphor for life",
+      "France is Becon and knowledge is power", "Do you know you are a perfect", "In the life I belive I am too competitive",`<span class='cursor-pointer' onclick='Randomdraw()'>click here for an achievement</span>`
 ]
 
 
