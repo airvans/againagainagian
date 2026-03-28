@@ -39,7 +39,7 @@ function dotheshuffle() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "assets/inspector.png");
+    showachievement(name, text, "/inspector.png");
   }
 }
 
@@ -49,7 +49,7 @@ function Randomdraw() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "assets/lucky.png");
+    showachievement(name, text, "/lucky.png");
   }
 }
 
@@ -59,7 +59,7 @@ function checkmark() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "assets/changer.png");
+    showachievement(name, text, "/changer.png");
   }
 }
 
@@ -74,7 +74,7 @@ function doacheck() {
 
   if (input == "champagnecoast" && !popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "assets/guessright.png");
+    showachievement(name, text, "/guessright.png");
   }
 }
 
@@ -107,7 +107,7 @@ function showachievement(name, text, img) {
 
   blackbackground();
   triggerConfetti();
-  playsound("./src/assets/1gift-confetti-447240.mp3")
+  playsound("/1gift-confetti-447240.mp3")
 }
 
 function triggerConfetti() {
@@ -171,7 +171,7 @@ function overachiever() {
      const finalname = "overachiever";
      const finaltext = "The end doesnt detere you";
      addachievement(finalname);
-     showachievement(finalname, finaltext, "assets/overachiever.png");
+     showachievement(finalname, finaltext, "/overachiever.png");
        
   }, 5000)
   
