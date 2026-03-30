@@ -8,7 +8,7 @@ const home = document.getElementById("section-home")
 const animationtracker = home.getAnimations()
 const tvimage = document.getElementById("tvimage")
 const tvsection = document.getElementById("section-tv")
-const channellist = [ "/history.gif", "/chred.gif","/cecesgif-cecesgifs.gif","/alpha.gif","/don't-think-so-guy.gif","/skeleton-meme-skeleton.gif"]
+const channellist = [ `<video src="/finishprod.webm" alt="remake" autoplay muted >`,`<img src="/history.gif" alt="History" class="h-full w-full object-contain scale-150">`, `<img src="/chred.gif" alt="Chred" class="h-full w-full object-contain scale-125">`,`<img src="/cecesgif-cecesgifs.gif" alt="Cecesgifs" class="h-full w-full object-contain">`,`<img src="/alpha.gif" alt="Alpha" class="h-full w-full object-contain">`,`<img src="/don't-think-so-guy.gif" alt="Don't Think So Guy" class="h-full w-full object-contain">`,`<img src="/skeleton-meme-skeleton.gif" alt="Skeleton Meme Skeleton" class="h-full w-full object-contain">` ]
 const beautifulhands = document.getElementById("myhand")
 const audio = document.getElementById("audio")
 const makesomenoice = document.querySelectorAll(".makesomenoice");
@@ -119,7 +119,7 @@ function temp_intervention(input) {
 
    helper_object.innerHTML = help.text;
 
-   console.log("intervention called with ", help)
+   //console.log("intervention called with ", help)
 
    intervention = setTimeout(() => {
       showFact();

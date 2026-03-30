@@ -16,11 +16,11 @@ export class TVController {
 
    turnON() {
       this.isON = true;
-      this.tvimageElement.src = this.channels[this.currentChannel];
+      this.tvimageElement.innerHTML = this.channels[this.currentChannel];
    }
    turnOff() {
       this.isON = false;
-      this.tvimageElement.src = ""
+      this.tvimageElement.innerHTML = ""
    }
 
    zoomUP() {
@@ -60,7 +60,7 @@ export class TVController {
       const len = this.channels.length;
       this.currentChannel = ((this.currentChannel % len) + len) % len;
 
-      if (tvimage) this.tvimageElement.src = this.channels[this.currentChannel];
+      if (tvimage) this.tvimageElement.innerHTML = this.channels[this.currentChannel];
 
    }
 
