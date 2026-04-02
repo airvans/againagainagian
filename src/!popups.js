@@ -107,7 +107,7 @@ function showachievement(name, text, img) {
 
   blackbackground();
   triggerConfetti();
-  playsound("/1gift-confetti-447240.mp3")
+  playsound("./1gift-confetti-447240.mp3")
 }
 
 function triggerConfetti() {
