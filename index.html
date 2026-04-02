@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobleveldev</title>
+    <meta name="author" content="Evan" />
+    <meta name="description" content="Evan's not-so personal website, showcasing his projects, thoughts, and other weird stuff. Currently under construction" />
+    <meta name="keywords" content="weird, incomplete, under construction, web development, personal website, projects, thoughts, portfolio" />
+    <link rel="canonical" href="https://www.mobleveldev.com/"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/againagainagian/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/againagainagian/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/againagainagian/favicon-16x16.png">
+    <link rel="manifest" href="/againagainagian/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Lora:ital,wght@1,400..700&display=swap"
+    rel="stylesheet" />
+ <!-- Open‑Graph / social -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mobleveldev – full‑stack web developer" />
+    <meta property="og:description" content="Evan – a pretty weird dude who blends logic and artistry to create web experiences." />
+    <meta property="og:url" content="https://www.example.com/" />
+    <meta property="og:image" content="https://www.example.com/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mobleveldev – full‑stack web developer" />
+    <meta name="twitter:description" content="Evan – a pretty weird dude who
+      blends logic and artistry to create web experiences." />
+    <meta name="twitter:image" content="https://www.example.com/assets/og-image.png" />
+
+   <!-- optionally JSON‑LD schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "mobleveldev",
+      "url": "https://www.example.com/",
+      "sameAs": [
+        "https://github.com/evan",
+        "https://twitter.com/evan"
+      ],
+      "jobTitle": "Developer"
+    }
+    </script>
+    <script type="module" crossorigin src="/againagainagian/assets/main-CcdbhiOA.js"></script>
+    <link rel="modulepreload" crossorigin href="/againagainagian/assets/!popups-BXwHhoQn.js">
+    <link rel="stylesheet" crossorigin href="/againagainagian/assets/!popups-_5If7CXg.css">
+    <link rel="stylesheet" crossorigin href="/againagainagian/assets/style-DJ24YJAX.css">
+  </head>
+  <style>
+  .lora-111 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #section-home {
+    animation: czyrink auto linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 95%;
+    /* transform-origin: center 280px ; in case i change srink to scale*/
+  }
+
+  #blocker {
+    animation: cloudblocker auto ease-in forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 95%;
+  }
+
+  #section-tv {
+    animation: hiddentv auto linear;
+    animation-timeline: scroll();
+  }
+
+  #tvimage {
+    animation: grow auto linear;
+    animation-timeline: scroll();
+    animation-range: 95% 100%;
+  }
+
+  @supports not (animation-timeline: scroll()) {
+    .simpsons {
+      animation: opening-gag 1s ease-in 1 1s forwards;
+    }
+  }
+
+  @keyframes opening-gag {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(300px);
+    }
+  }
+
+  @keyframes cloudblocker {
+    0% {
+      background-position: top;
+      transform: translateY(300px);
+    }
+
+    20% {
+      background-position: bottom;
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateY(-50px);
+      background-position: bottom;
+    }
+  }
+
+  @keyframes czyrink {
+    0% {}
+
+    10% {
+      border-radius: 20px;
+    }
+
+    100% {
+      height: 0px;
+      width: 0px;
+      top: 280px;
+      border-radius: 50px;
+      background-position: bottom;
+    }
+  }
+
+  @keyframes hiddentv {
+    15% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+      border-radius: 80px;
+    }
+
+    99% {
+      transform: scale(1, 1);
+      opacity: 1;
+      border-radius: 80px;
+    }
+
+    100% {
+      transform: scale(1, 1);
+      opacity: 1;
+      border-radius: 0px;
+    }
+  }
+
+  /* The switch - the box around the slider */
+
+  #slider {
+    background-color: #ccc;
+    border-radius: 30px;
+    -webkit-animation: 0.4s;
+    animation: 0.4s;
+  }
+
+  #another {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  #another::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22%2015L16%209.00001M22%209L16%2015'%20stroke='%231e2939'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cpath%20d='M2%2014.9588L2%209.04123C2%208.46617%202.44772%208%203%208H6.58579C6.851%208%207.10536%207.8903%207.29289%207.69503L10.2929%204.30706C10.9229%203.65112%2012%204.11568%2012%205.04332V18.9567C12%2019.8908%2010.91%2020.3524%2010.2839%2019.6834L7.29437%2016.3145C7.10615%2016.1134%206.84791%2016%206.57824%2016H3C2.44772%2016%202%2015.5338%202%2014.9588Z'%20stroke='%231e2939'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e") center/contain no-repeat;
+  }
+
+  #slidecheck:checked+#slider {
+    background-color: oklch(60.9% 0.126 221.723);
+  }
+
+  #slidecheck:checked~#another {
+    transform: translateX(30px) translateY(-50%);
+  }
+
+  #slidecheck:checked~#another::before {
+    background: url("data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2014.9588L2%209.04123C2%208.46617%202.44772%208%203%208H6.58579C6.851%208%207.10536%207.8903%207.29289%207.69503L10.2929%204.30706C10.9229%203.65112%2012%204.11568%2012%205.04332V18.9567C12%2019.8908%2010.91%2020.3524%2010.2839%2019.6834L7.29437%2016.3145C7.10615%2016.1134%206.84791%2016%206.57824%2016H3C2.44772%2016%202%2015.5338%202%2014.9588Z'%20stroke='%231e2939'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16%208.5C17.3333%2010.2778%2017.3333%2013.7222%2016%2015.5'%20stroke='%231e2939'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M19%205C22.9879%208.80835%2023.0121%2015.2171%2019%2019'%20stroke='%231e2939'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e") center/contain no-repeat;
+  }
+</style>
+  <body>
+  <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
+    0%
+  </div>
+  <div id="navbar"
+    class="text-gray-800/80 absolute h-9 w-110 bg-white/10 backdrop-blur-md backdrop-grayscale-20 shadow-sm rounded-3xl top-7 left-[50%] -translate-x-[51.6%] z-3 flex justify-between items-center py-1 pl-5 pr-2">
+    <a href="/Ads&thoughts.html">
+      <div id="logo"
+        class="size-6 cursor-default bg-[url(assets/skyman.svg)] bg-center bg-no-repeat bg-contain rotate-10"></div>
+    </a>
+    <ul class="flex gap-5 text-xs font-[Epilogue]">
+      <li><a href="/" class="hover:text-gray-800">Home</a></li>
+      <li>
+        <a href="./projects.html" class="hover:text-gray-800">Projects</a>
+      </li>
+      <li><a href="/changelog.html" class="hover:text-gray-800">Logs</a></li>
+    </ul>
+    <label class="switch relative inline-block w-15 h-7">
+      <input id="slidecheck" type="checkbox" class="opacity-0 w-0 h-0" />
+      <span id="slider" class="absolute top-0 left-0 right-0 bottom-0 inset-shadow-sm"></span>
+      <div id="another"></div>
+    </label>
+  </div>
+
+  <div id="helper-object"
+    class="text-center text-gray-800/80 absolute bottom-5 left-[50%] -translate-x-[50%] z-3 text-sm animate-bounce jersey-10-regular">
+    <span class="mr-2"> ↓ </span> Scroll down
+  </div>
+
+  <div id="main" class="h-screen w-screen bg-gray-100 overflow-y-scroll overflow-clip font-[Epilogue]">
+    <div id="section-home"
+      class="z-1 bg-[url(./assets/background-v3.png)] bg-size-[100vw] bg-position-[bottom_99%_right_50%] h-screen w-full sticky top-0 m-auto overflow-clip">
+      <div id="inner"
+        class="h-screen w-screen flex flex-col justify-center text-center text-white/80 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <p class="text-2xl font-extrabold mb-4">
+          Hi, I'm <span class="lora-111">Evan</span>
+        </p>
+        <p class="text-6xl/17 font-extrabold">I build things for the web</p>
+        <p class="text-lg font-light mt-5">
+          I'm a full-stack developer, blending logic and artistry to conjure
+          <br />
+          digital experiences that captivate and inspire
+        </p>
+      </div>
+      <div id="blocker"
+        class="bg-[url(./assets/cloudblocker.png)] simpsons absolute w-screen h-screen bg-cover top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]">
+      </div>
+    </div>
+
+    <div id="section-tv" class="h-100 sticky top-25 opacity-0">
+      <div id="tvimage" class="absolute h-55 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 overflow-clip">
+
+      </div>
+
+      <img id="oldtv" src="/againagainagian/assets/result-V_h92VB6.png" alt="old_tv" class="h-100 m-auto translate-x-1 opacity-100" />
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[27.5%] opacity-0"></div>
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[37.5%] opacity-0"></div>
+      <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[47.5%] opacity-0"></div>
+    </div>
+
+    <div id="scroller" class="h-800 w-1 bg-linear-to-b from-purple-700 to-blue-300 opacity-0"></div>
+
+    <div id="section-hand" class="h-80 w-80 overflow-clip translate-x-[calc(100vw-337px)]">
+      <img id="myhand" src="/againagainagian/ezgifbase.png" alt="my-beautiful-hands"
+        class="absolute -top-20 -left-5 -rotate-32" />
+    </div>
+    <audio id="audio" src="/againagainagian/assets/notification-alert-9-331720-BvXWsxD1.mp3" muted></audio>
+  </div>
+  <!-- Simple Analytics - 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
+</html>
