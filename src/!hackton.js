@@ -8,7 +8,7 @@ const home = document.getElementById("section-home")
 const animationtracker = home.getAnimations()
 const tvimage = document.getElementById("tvimage")
 const tvsection = document.getElementById("section-tv")
-const channellist = [ `<video src="/finishprod.webm" alt="remake" autoplay muted >`,`<img src="/history.gif" alt="History" class="h-full w-full object-contain scale-150">`, `<img src="/chred.gif" alt="Chred" class="h-full w-full object-contain scale-125">`,`<img src="/cecesgif-cecesgifs.gif" alt="Cecesgifs" class="h-full w-full object-contain">`,`<img src="/alpha.gif" alt="Alpha" class="h-full w-full object-contain">`,`<img src="/don't-think-so-guy.gif" alt="Don't Think So Guy" class="h-full w-full object-contain">`,`<img src="/skeleton-meme-skeleton.gif" alt="Skeleton Meme Skeleton" class="h-full w-full object-contain">` ]
+const channellist = [ `<video src="./finishprod.webm" alt="remake" autoplay muted >`,`<img src="./history.gif" alt="History" class="h-full w-full object-contain scale-150">`, `<img src="./chred.gif" alt="Chred" class="h-full w-full object-contain scale-125">`,`<img src="./cecesgif-cecesgifs.gif" alt="Cecesgifs" class="h-full w-full object-contain">`,`<img src="./alpha.gif" alt="Alpha" class="h-full w-full object-contain">`,`<img src="./don't-think-so-guy.gif" alt="Don't Think So Guy" class="h-full w-full object-contain">`,`<img src="./skeleton-meme-skeleton.gif" alt="Skeleton Meme Skeleton" class="h-full w-full object-contain">` ]
 const beautifulhands = document.getElementById("myhand")
 const audio = document.getElementById("audio")
 const makesomenoice = document.querySelectorAll(".makesomenoice");
@@ -34,23 +34,23 @@ document.addEventListener("keydown", (e) => {
    if (action) {
       switch (action) {
          case "up":
-            hands.click("/ezgifup.gif");
+            hands.click("./ezgifup.gif");
             tvcontroller.zoomUP();
             break;
          case "down":
-            hands.click("/ezgifdown.gif");
+            hands.click("./ezgifdown.gif");
             tvcontroller.zoomDOWN();
             break;
          case "left":
-            hands.click("/ezgifleft.gif");
+            hands.click("./ezgifleft.gif");
             tvcontroller.channelchanger(-1);
             break;
          case "right":
-            hands.click("/ezgifright.gif");
+            hands.click("./ezgifright.gif");
             tvcontroller.channelchanger(1);
             break;
          case "active":
-            hands.click("/ezgifactive.gif");
+            hands.click("./ezgifactive.gif");
             playsound("./src/assets/tvon.mp3");
             if (tvcontroller.isON) {
                tvcontroller.turnOff();
