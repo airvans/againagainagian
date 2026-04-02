@@ -51,7 +51,7 @@ document.addEventListener("keydown", (e) => {
             break;
          case "active":
             hands.click("./ezgifactive.gif");
-            playsound("./src/assets/tvon.mp3");
+            playsound("./tvon.mp3");
             if (tvcontroller.isON) {
                tvcontroller.turnOff();
             } else {
