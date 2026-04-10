@@ -39,7 +39,7 @@ function dotheshuffle() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "/againagainagian/inspector.png");
+    showachievement(name, text, "./inspector.png");
   }
 }
 
@@ -49,7 +49,7 @@ function Randomdraw() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "/againagainagian/lucky.png");
+    showachievement(name, text, "./lucky.png");
   }
 }
 
@@ -59,7 +59,7 @@ function checkmark() {
 
   if (!popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "/againagainagian/changer.png");
+    showachievement(name, text, "./changer.png");
   }
 }
 
@@ -74,7 +74,7 @@ function doacheck() {
 
   if (input == "champagnecoast" && !popupset.has(name)) {
     addachievement(name);
-    showachievement(name, text, "/againagainagian/guessright.png");
+    showachievement(name, text, "./guessright.png");
   }
 }
 
@@ -171,7 +171,7 @@ function overachiever() {
      const finalname = "overachiever";
      const finaltext = "The end doesnt detere you";
      addachievement(finalname);
-     showachievement(finalname, finaltext, "/againagainagian/overachiever.png");
+     showachievement(finalname, finaltext, "./overachiever.png");
        
   }, 5000)
   
