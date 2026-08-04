@@ -212,28 +212,51 @@
     background: url("./src/assets/svgviewer-output.svg") center/contain no-repeat;
   }
 </style>
-  <body>
+  <body class="bg-white">
   <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
     0%
   </div>
+  <div id="burgermenu" popover="auto"  class="bg-gray-400 h-full w-full text-white/80  ">
+    <button popovertarget="burgermenu" popovertargetaction="hide" class="absolute size-7 top-3 right-2 cursor-pointer active:scale-95">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <ul class="absolute top-[50%] left-[50%] -translate-[50%] text-4xl font-[Epilogue] space-y-6 text-center">
+        <li><a href="./" class="hover:text-gray-800">Home</a></li>
+        <li>
+          <a href="./projects.html" class="hover:text-gray-800">Projects</a>
+        </li>
+        <li><a href="./changelog.html" class="hover:text-gray-800">Logs</a></li>
+    </ul>
+  </div>
   <div id="navbar"
-    class="text-gray-800/80 absolute h-9 w-110 bg-white/10 backdrop-blur-md backdrop-grayscale-20 shadow-sm rounded-3xl top-7 left-[50%] -translate-x-[51.6%] z-3 flex justify-between items-center py-1 pl-5 pr-2">
-    <a href="./Ads&thoughts.html">
+    class="text-gray-800/80 absolute h-9 w-full max-w-110 md:bg-white/10 md:backdrop-blur-md md:backdrop-grayscale-20 md:shadow-sm rounded-3xl left-[50%] -translate-x-[50%] md:top-7 top-2 z-3 flex justify-between items-center py-1 pl-5 pr-2">
+    <a href="./Ads&thoughts.html" class="">
       <div id="logo"
         class="size-6 cursor-default bg-[url(assets/skyman.svg)] bg-center bg-no-repeat bg-contain rotate-10"></div>
     </a>
-    <ul class="flex gap-5 text-xs font-[Epilogue]">
-      <li><a href="./" class="hover:text-gray-800">Home</a></li>
-      <li>
-        <a href="./projects.html" class="hover:text-gray-800">Projects</a>
-      </li>
-      <li><a href="./changelog.html" class="hover:text-gray-800">Logs</a></li>
-    </ul>
-    <label class="switch relative inline-block w-15 h-7">
+
+    <div class="hidden md:block">
+      <ul class="flex gap-5 text-xs font-[Epilogue]">
+        <li><a href="./" class="hover:text-gray-800">Home</a></li>
+        <li>
+          <a href="./projects.html" class="hover:text-gray-800">Projects</a>
+        </li>
+        <li><a href="./changelog.html" class="hover:text-gray-800">Logs</a></li>
+      </ul>
+    </div>
+
+    <label class="hidden lg:block switch relative w-15 h-7">
       <input id="slidecheck" type="checkbox" class="opacity-0 w-0 h-0" />
       <span id="slider" class="absolute top-0 left-0 right-0 bottom-0 inset-shadow-sm"></span>
       <div id="another"></div>
     </label>
+    <button popovertarget="burgermenu" class="size-6 md:hidden text-gray-800/70 cursor-pointer active:scale-95" id="hamburger">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 
   <div id="helper-object"
@@ -241,7 +264,7 @@
     <span class="mr-2"> ↓ </span> Scroll down
   </div>
 
-  <div id="main" class="h-screen w-screen bg-gray-100 overflow-y-scroll overflow-clip font-[Epilogue]">
+  <div id="main" class="hidden h-screen w-screen bg-gray-100 overflow-y-scroll overflow-clip font-[Epilogue]">
     <div id="section-home"
       class="z-1 bg-[url(./assets/background-v3.png)] bg-size-[100vw] bg-position-[bottom_99%_right_50%] h-screen w-full sticky top-0 m-auto overflow-clip">
       <div id="inner"
