@@ -60,7 +60,9 @@
     font-style: normal;
   }
  
-
+/* #main{
+  scrollbar-width: thin;
+} */
 
   /*
   #section-home {
@@ -268,16 +270,16 @@
     <span class="mr-2"> ↓ </span> Scroll down
   </div>
 
-  <div id="main" class="h-screen overflow-y-auto bg-gray-300 font-[Epilogue]">
+  <div id="main" class="h-screen overflow-y-auto bg-gray-500 font-[Epilogue]">
     
     <div id="section-home" style="text-wrap:balance;"
-        class=" h-screen top-0 border-red-600  flex flex-col justify-center text-center text-white/80 ">
+        class=" h-screen top-0 border-red-600 sticky flex flex-col justify-center text-center text-white/80 ">
 
-        <p class="text-2xl font-extrabold mb-4">
+        <p class="text-xl md:text-2xl font-extrabold mb-4 ">
           Hi, I'm <span class="lora-111">Evan</span>
         </p>
-        <p class="text-6xl/17 font-extrabold">I build things for the web</p>
-        <p class="text-lg font-light mt-5">
+        <p class="text-4xl md:text-6xl/17 font-extrabold ">I build things for the web</p>
+        <p class="text-sm md:text-lg font-light mt-5 mx-8 md:mx-0 ">
           I'm a full-stack developer, blending logic and artistry to conjure
           <br />
           digital experiences that captivate and inspire
@@ -287,7 +289,7 @@
 
    
 
-    <div id="section-tv" class="h-100 border-2 sticky top-25 opacity-100 ">
+    <div id="section-tv" class="h-100 border-2 sticky top-50 md:top-25 opacity-100 ">
       <div id="tvimage" class="absolute h-45 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 overflow-clip">
 
       </div>
@@ -300,9 +302,9 @@
 
     <div id="scroller" class="h-800 w-1 bg-linear-to-b from-purple-700 to-blue-300 opacity-100"></div>
 
-    <div id="section-hand" class=" h-80 w-80 overflow-clip translate-x-[calc(100vw-337px)]">
+    <div id="section-hand" class="relative translate-x-[calc(100%-25px)] -translate-y-15 md:translate-y-0 md:translate-x-[calc(100vw-335px)] overflow-clip h-50 w-50 md:h-80 md:w-80 bottom-0  border-red-500">
       <img id="myhand" src="/ezgifbase.png" alt="my-beautiful-hands"
-        class="absolute -top-20 -left-5 -rotate-32" />
+        class="absolute -top-23 md:-top-20 -left-5 -rotate-32 " />
     </div>
     <audio id="audio" src="./src/assets/notification-alert-9-331720.mp3" muted></audio>
   </div>
