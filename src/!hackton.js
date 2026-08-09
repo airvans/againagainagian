@@ -27,7 +27,7 @@ muteagent.addEventListener("change", (e) => {
 
 document.addEventListener("keydown", (e) => {
 
-   if (animationvalue() < 100) return;
+   //if (animationvalue() < 100) return;
 
    const action = KeyActions[e.key] || null;
 
