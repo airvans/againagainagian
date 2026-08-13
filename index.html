@@ -270,7 +270,7 @@
     <span class="mr-2"> ↓ </span> Scroll down
   </div>
 
-  <div id="main" class="h-screen overflow-y-auto overflow-x-clip bg-gray-500 font-[Epilogue]">
+  <div id="main" class="relative h-screen overflow-y-auto overflow-x-clip bg-gray-500 font-[Epilogue]">
     
     <div id="section-home" style="text-wrap:balance;"
         class=" h-screen top-0 border-red-600 sticky flex flex-col justify-center text-center text-white/80 ">
@@ -287,7 +287,10 @@
 
     </div>
 
+    <div class="absolute size-60 bg-amber-300 top-0 left-0"></div>
+
    
+    <div id="scroller" class="h-800 w-1 bg-linear-to-b from-purple-700 to-blue-300 opacity-100"></div>
 
     <div id="section-tv" class="h-100 border-2 sticky top-50 md:top-25 opacity-100 ">
       <div id="tvimage" class="absolute h-45 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 overflow-clip">
@@ -300,7 +303,6 @@
       <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[47.5%] opacity-0"></div>
     </div>
 
-    <div id="scroller" class="h-800 w-1 bg-linear-to-b from-purple-700 to-blue-300 opacity-100"></div>
 
     <div id="section-hand" class="relative translate-x-[calc(100%-25px)] -translate-y-15 md:translate-y-0 md:translate-x-[calc(100vw-335px)] overflow-clip h-50 w-50 md:h-80 md:w-80 bottom-0  border-red-500">
       <img id="myhand" src="/ezgifbase.png" alt="my-beautiful-hands"
