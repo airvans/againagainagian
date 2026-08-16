@@ -1,38 +1,42 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobleveldev</title>
-    <meta name="author" content="Evan" />
-    <meta name="description" content="Evan's not-so personal website, showcasing his projects, thoughts, and other weird stuff. Currently under construction" />
-    <meta name="keywords" content="weird, incomplete, under construction, web development, personal website, projects, thoughts, portfolio" />
-    <link href="/src/style.css" rel="stylesheet">
-    <link rel="canonical" href="https://moblvl.dev/"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobleveldev</title>
+  <meta name="author" content="Evan" />
+  <meta name="description"
+    content="Evan's not-so personal website, showcasing his projects, thoughts, and other weird stuff. Currently under construction" />
+  <meta name="keywords"
+    content="weird, incomplete, under construction, web development, personal website, projects, thoughts, portfolio" />
+  <link href="/src/style.css" rel="stylesheet">
+  <link rel="canonical" href="https://moblvl.dev/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
     href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Lora:ital,wght@1,400..700&display=swap"
     rel="stylesheet" />
- <!-- Open‑Graph / social -->
+  <!-- Open‑Graph / social -->
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mobleveldev – full‑stack web developer" />
-    <meta property="og:description" content="Evan – a pretty weird dude who blends logic and artistry to create web experiences." />
-    <meta property="og:url" content="https://moblvl.dev/" />
-    <meta property="og:image" content="https://moblvl.dev/assets/og-image.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mobleveldev – full‑stack web developer" />
-    <meta name="twitter:description" content="Evan – a pretty weird dude who
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mobleveldev – full‑stack web developer" />
+  <meta property="og:description"
+    content="Evan – a pretty weird dude who blends logic and artistry to create web experiences." />
+  <meta property="og:url" content="https://moblvl.dev/" />
+  <meta property="og:image" content="https://moblvl.dev/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobleveldev – full‑stack web developer" />
+  <meta name="twitter:description" content="Evan – a pretty weird dude who
       blends logic and artistry to create web experiences." />
-    <meta name="twitter:image" content="https://moblvl.dev/assets/og-image.png" />
+  <meta name="twitter:image" content="https://moblvl.dev/assets/og-image.png" />
 
-   <!-- optionally JSON‑LD schema.org -->
-    <script type="application/ld+json">
+  <!-- optionally JSON‑LD schema.org -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -45,8 +49,8 @@
       "jobTitle": "Developer"
     }
     </script>
-  </head>
-  <style>
+</head>
+<style>
   .lora-111 {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
@@ -59,8 +63,8 @@
     font-weight: 400;
     font-style: normal;
   }
- 
-/* #main{
+
+  /* #main{
   scrollbar-width: thin;
 } */
 
@@ -72,7 +76,7 @@
   }
   /* transform-origin: center 280px ; in case i change srink to scale*/
 
-/*
+  /*
   #blocker {
     animation: cloudblocker auto ease-in forwards;
     animation-timeline: scroll();
@@ -218,22 +222,25 @@
     background: url("./src/assets/svgviewer-output.svg") center/contain no-repeat;
   }
 </style>
-  <body class="bg-white ">
+
+<body class="bg-white ">
   <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
     0%
   </div>
-  <div id="burgermenu" popover="auto"  class="bg-gray-400 h-full w-full text-white/80  ">
-    <button popovertarget="burgermenu" popovertargetaction="hide" class="absolute size-7 top-3 right-2 cursor-pointer active:scale-95">
+  <div id="burgermenu" popover="auto" class="bg-gray-400 h-full w-full text-white/80  ">
+    <button popovertarget="burgermenu" popovertargetaction="hide"
+      class="absolute size-7 top-3 right-2 cursor-pointer active:scale-95">
       <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
     </button>
     <ul class="absolute top-[50%] left-[50%] -translate-[50%] text-4xl font-[Epilogue] space-y-6 text-center">
-        <li><a href="./" class="hover:text-gray-800">Home</a></li>
-        <li>
-          <a href="./projects.html" class="hover:text-gray-800">Projects</a>
-        </li>
-        <li><a href="./changelog.html" class="hover:text-gray-800">Logs</a></li>
+      <li><a href="./" class="hover:text-gray-800">Home</a></li>
+      <li>
+        <a href="./projects.html" class="hover:text-gray-800">Projects</a>
+      </li>
+      <li><a href="./changelog.html" class="hover:text-gray-800">Logs</a></li>
     </ul>
   </div>
   <div id="navbar"
@@ -258,9 +265,11 @@
       <span id="slider" class="absolute top-0 left-0 right-0 bottom-0 inset-shadow-sm"></span>
       <div id="another"></div>
     </label>
-    <button popovertarget="burgermenu" class="size-6 md:hidden text-gray-800/70 cursor-pointer active:scale-95" id="hamburger">
+    <button popovertarget="burgermenu" class="size-6 md:hidden text-gray-800/70 cursor-pointer active:scale-95"
+      id="hamburger">
       <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
     </button>
   </div>
@@ -270,45 +279,61 @@
     <span class="mr-2"> ↓ </span> Scroll down
   </div>
 
-  <div id="main" class="relative h-screen overflow-y-auto overflow-x-clip bg-[url(assets/background-v3-blank.png)] bg-local bg-cover bg-center font-[Epilogue]">
-    
-    <div id="section-home" style="text-wrap:balance;"
-        class=" h-screen top-0 border-red-600 sticky flex flex-col justify-center text-center text-white/80 ">
+  <div id="main"
+    class="relative h-screen overflow-y-auto overflow-x-clip bg-[url(assets/background-v3-blank.png)] bg-local bg-cover bg-center font-[Epilogue]">
 
-        <p class="text-xl md:text-2xl font-extrabold mb-4 ">
-          Hi, I'm <span class="lora-111">Evan</span>
-        </p>
-        <p class="text-4xl md:text-6xl/17 font-extrabold ">I build things for the web</p>
-        <p class="text-sm md:text-lg font-light mt-5 mx-8 md:mx-0 ">
-          I'm a full-stack developer, blending logic and artistry to conjure
-          <br />
-          digital experiences that captivate and inspire
-        </p>
+    <div id="section-home" style="text-wrap:balance;"
+      class=" h-screen top-0 border-red-600 sticky flex flex-col justify-center text-center text-white/80 ">
+
+      <p class="text-xl md:text-2xl font-extrabold mb-4 ">
+        Hi, I'm <span class="lora-111">Evan</span>
+      </p>
+      <p class="text-4xl md:text-6xl/17 font-extrabold ">I build things for the web</p>
+      <p class="text-sm md:text-lg font-light mt-5 mx-8 md:mx-0 ">
+        I'm a full-stack developer, blending logic and artistry to conjure
+        <br />
+        digital experiences that captivate and inspire
+      </p>
 
     </div>
 
     <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 left-0 rotate-180"></div>
     <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 right-0 -rotate-90"></div>
- 
-    <div id="scroller" class="h-screen md:h-300 relative border border-red-600 bg-linear-to-b from-transparent to-gray-100 opacity-100">
 
-      <img class="absolute -top-40 md:-top-66 right-0" src="./src/assets/pngwing6.png" alt="">
-      <img class="absolute -top-40 md:-top-66 -right-170" src="./src/assets/pngwing6.png" alt="">
-      <img class="absolute -left-60 -scale-x-100" src="./src/assets/pngwing6.png" alt="">
-     
+    <div id="scroller"
+      class="h-screen translate-y-3 md:h-300 relative  bg-linear-to-b from-transparent from-30% to-gray-100 to-60% opacity-100">
+      <div>
+        <img class="absolute -top-40 md:-top-66 right-0" src="./src/assets/pngwing6.png" alt="">
+        <img class="absolute -right-10 md:-top-66 md:-right-170" src="./src/assets/pngwing6.png" alt="">
+        <img class="absolute -left-60 -scale-x-100" src="./src/assets/pngwing6.png" alt="">
+      </div>
+
       <img class="absolute -top-40 md:-top-40 w-full" src="./src/assets/cloudblocker.png" alt="">
-     
-      <img class="absolute  -left-180 top-60" src="./src/assets/pngwing2.png" alt="">
-      <img class="absolute top-90" src="./src/assets/pngwing8.png" alt="">
-      <img class="absolute top-90 -left-80" src="./src/assets/pngwing8.png" alt="">
-      <img class="absolute top-90 -right-80" src="./src/assets/pngwing8.png" alt="">
+
+      <img class=" absolute md:hidden -left-30 md:-left-180 top-12" src="./src/assets/pngwing2.png" alt="">
+      <img class=" absolute md:hidden -right-30 md:-left-180 top-12" src="./src/assets/pngwing2.png" alt="">
+
+
+      <img class=" absolute -left-30 md:-left-180 top-60" src="./src/assets/pngwing2.png" alt="">
+      <img class=" absolute md:hidden -right-30 md:-left-180 top-60" src="./src/assets/pngwing2.png" alt="">
+
+
+      <div>
+        <img class="absolute top-70 md:top-90" src="./src/assets/pngwing8.png" alt="">
+        <img class="absolute top-70 md:top-90 -left-40 md:-left-150" src="./src/assets/pngwing8.png" alt="">
+        <img class="absolute top-70 md:top-90 -right-40 md:-right-80" src="./src/assets/pngwing8.png" alt="">
+      </div>
+
+      <img class="-right-10 absolute md:hidden top-20" src="./src/assets/pngwing3.png" alt="">
+
 
     </div>
 
-    <div class="sticky h-screen
+    <div id="section-tv" class="sticky h-screen
      bg-gray-100 top-0 ">
-      <div id="section-tv" class="h-100 sticky top-50 md:top-25 opacity-100 ">
-        <div id="tvimage" class="absolute h-45 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 overflow-clip">
+      <div class="h-100 sticky top-50 md:top-25 opacity-100 ">
+        <div id="tvimage"
+          class="absolute h-45 w-70 left-[50%] -translate-x-[50%] translate-y-18 bg-gray-400 overflow-clip">
         </div>
         <img id="oldtv" src="./src/assets/result.png" alt="old_tv" class="w-90 m-auto translate-x-1 opacity-100" />
         <div class="makesomenoice absolute size-8 bg-blue-500 left-[60%] top-[27.5%] opacity-0"></div>
@@ -318,7 +343,8 @@
     </div>
 
 
-    <div id="section-hand" class="relative translate-x-[calc(100%-25px)] -translate-y-15 md:translate-y-0 md:translate-x-[calc(100vw-335px)] overflow-clip h-50 w-50 md:h-80 md:w-80 bottom-0  border-red-500">
+    <div id="section-hand"
+      class="relative translate-x-[calc(100%-25px)] -translate-y-15 md:translate-y-0 md:translate-x-[calc(100vw-335px)] overflow-clip h-50 w-50 md:h-80 md:w-80 bottom-0  border-red-500">
       <img id="myhand" src="/ezgifbase.png" alt="my-beautiful-hands"
         class="absolute -top-23 md:-top-20 -left-5 -rotate-32 " />
     </div>
@@ -327,6 +353,7 @@
   <script type="module" src="./src/!hackton.js"></script>
   <script type="module" src="./src/!popups.js"></script>
   <!-- Simple Analytics - 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
+
 </html>
