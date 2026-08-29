@@ -14,6 +14,9 @@ const audio = document.getElementById("audio")
 const makesomenoice = document.querySelectorAll(".makesomenoice");
 
 
+//tempary clear 
+localStorage.clear()
+
 // class invocations
 
 const tvcontroller = new TVController(channellist, tvimage, tvsection , temp_intervention);
