@@ -14,8 +14,6 @@ const audio = document.getElementById("audio")
 const makesomenoice = document.querySelectorAll(".makesomenoice");
 
 
-//tempary clear 
-localStorage.clear()
 
 // class invocations
 
