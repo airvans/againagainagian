@@ -4,8 +4,7 @@ let temp = null;
 let intervention = null;
 const helper_object = document.getElementById("helper-object")
 const muteagent = document.getElementById("slidecheck")
-const home = document.getElementById("section-home")
-const animationtracker = home.getAnimations()
+const main = document.getElementById("main")
 const tvimage = document.getElementById("tvimage")
 const tvsection = document.getElementById("section-tv")
 const channellist = [ `<video src="./finishprod.webm" alt="remake" autoplay muted >`,`<img src="./history.gif" alt="History" class="h-full w-full object-contain scale-150">`, `<img src="./chred.gif" alt="Chred" class="h-full w-full object-contain scale-125">`,`<img src="./cecesgif-cecesgifs.gif" alt="Cecesgifs" class="h-full w-full object-contain">`,`<img src="./alpha.gif" alt="Alpha" class="h-full w-full object-contain">`,`<img src="./don't-think-so-guy.gif" alt="Don't Think So Guy" class="h-full w-full object-contain">`,`<img src="./skeleton-meme-skeleton.gif" alt="Skeleton Meme Skeleton" class="h-full w-full object-contain">` ]
@@ -28,7 +27,7 @@ muteagent.addEventListener("change", (e) => {
 
 document.addEventListener("keydown", (e) => {
 
-   //if (animationvalue() < 100) return;
+   if (animationvalue() < 100) return;
 
    const action = KeyActions[e.key] || null;
 
@@ -71,7 +70,7 @@ document.addEventListener("keydown", (e) => {
 })
 
 
-document.getElementById("main").addEventListener("scroll", () => {
+main.addEventListener("scroll", () => {
 
    document.getElementById("tracker").innerText = `${animationvalue()}%`
 
@@ -144,8 +143,13 @@ function showFact() {
 }
 
 function animationvalue() {
-   let timeline = animationtracker[0].timeline.currentTime
-   return timeline.value.toFixed(0)
+   
+   const scrollableHeight = main.scrollHeight - main.clientHeight
+   const progress = scrollableHeight > 0
+      ? (main.scrollTop / scrollableHeight) * 100
+      : 0
+
+   return Math.min(100, Math.max(0, progress)).toFixed(0)
 }
 
 function playsound(src) {
