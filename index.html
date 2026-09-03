@@ -225,10 +225,9 @@
   #burgermenu[popover]{
     clip-path:circle(10% at 100% 0%);
     transition: 
-    clip-path 0.5s ease-in-out,
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete;
-    
+    clip-path 0.6s ease-in-out,
+    display   0.6s allow-discrete,
+    overlay   0.6s allow-discrete;
   }
 
   #burgermenu[popover]:popover-open {
@@ -240,6 +239,26 @@
     }
   }
 
+   #burgermenu[popover]:popover-open li{
+
+    opacity:1;
+    transform:translateY(0px);
+    transition: all 0.3s ease-in-out;
+    transition-delay: calc(sibling-index() * 0.1s);
+
+    @starting-style{
+      opacity:0;
+      transform:translateY(-20px);
+    }
+   }
+
+    #burgermenu[popover] li{
+      opacity:0;
+      transform:translateY(-20px);
+      transition: all 0.2s ease-in-out;
+      transition-delay: calc(sibling-index() * 0.02s); 
+    }
+
 
 </style>
 <!-- Pure CSS Exit & Entry Animations -->
@@ -247,7 +266,7 @@
   <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
     0%
   </div>
-  <div id="burgermenu" popover="auto" class="bg-gray-400 h-full w-full text-white/80  ">
+  <div id="burgermenu" popover="auto" class="bg-cyan-600 h-full w-full text-white/80  ">
     <button popovertarget="burgermenu" popovertargetaction="hide"
       class="absolute size-7 top-3 right-2 cursor-pointer active:scale-95">
       <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
