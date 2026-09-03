@@ -221,6 +221,26 @@
   #slidecheck:checked~#another::before {
     background: url("./src/assets/svgviewer-output.svg") center/contain no-repeat;
   }
+
+  #burgermenu[popover]{
+    clip-path:circle(10% at 100% 0%);
+    transition: 
+    clip-path 0.5s ease-in-out,
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete;
+    
+  }
+
+  #burgermenu[popover]:popover-open {
+    clip-path: circle(200% at 100% 0%);
+    transition: clip-path 0.5s ease-in-out;
+    
+    @starting-style{
+      clip-path:circle(10% at 100% 0%);
+    }
+  }
+
+
 </style>
 <!-- Pure CSS Exit & Entry Animations -->
 <body class="bg-white ">
