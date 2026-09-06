@@ -94,7 +94,7 @@
     animation-range: 95% 100%;
   }
 */
-  @supports not (animation-timeline: scroll()) {
+  /* @supports not (animation-timeline: scroll()) {
     .simpsons {
       animation: opening-gag 1s ease-in 1 1s forwards;
     }
@@ -175,9 +175,55 @@
       opacity: 1;
       border-radius: 0px;
     }
-  }
+  } */
 
   /* The switch - the box around the slider */
+
+ 
+  #layer-1{
+    inset: 0;
+    pointer-events: none;
+    will-change: transform;
+    animation: tophold linear both;
+    animation-timeline: scroll();
+  }
+
+  #layer-2 {
+    --layer-speed: -100px;
+    inset: 0;
+    pointer-events: none;
+    will-change: transform;
+    animation: tophold linear both;
+    animation-timeline: scroll();
+  }
+
+  #layer-3{
+    --layer-speed: -300px;
+    inset: 0;
+    pointer-events: none;
+    will-change: transform;
+    animation: parallax linear both;
+    animation-timeline: scroll();
+  }
+
+  @keyframes tophold{
+    to{top:-500px;}
+  }
+
+  @keyframes parallax {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(var(--layer-speed));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .layer {
+      animation: none;
+    }
+  }
 
   #slider {
     background-color: #ccc;
@@ -222,46 +268,45 @@
     background: url("./src/assets/svgviewer-output.svg") center/contain no-repeat;
   }
 
-  #burgermenu[popover]{
-    clip-path:circle(10% at 100% 0%);
-    transition: 
-    clip-path 0.6s ease-in-out,
-    display   0.6s allow-discrete,
-    overlay   0.6s allow-discrete;
+  #burgermenu[popover] {
+    clip-path: circle(10% at 100% 0%);
+    transition:
+      clip-path 0.6s ease-in-out,
+      display 0.6s allow-discrete,
+      overlay 0.6s allow-discrete;
   }
 
   #burgermenu[popover]:popover-open {
     clip-path: circle(200% at 100% 0%);
     transition: clip-path 0.5s ease-in-out;
-    
-    @starting-style{
-      clip-path:circle(10% at 100% 0%);
+
+    @starting-style {
+      clip-path: circle(10% at 100% 0%);
     }
   }
 
-   #burgermenu[popover]:popover-open li{
+  #burgermenu[popover]:popover-open li {
 
-    opacity:1;
-    transform:translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
     transition: all 0.3s ease-in-out;
     transition-delay: calc(sibling-index() * 0.1s);
 
-    @starting-style{
-      opacity:0;
-      transform:translateY(-20px);
+    @starting-style {
+      opacity: 0;
+      transform: translateY(-20px);
     }
-   }
+  }
 
-    #burgermenu[popover] li{
-      opacity:0;
-      transform:translateY(-20px);
-      transition: all 0.2s ease-in-out;
-      transition-delay: calc(sibling-index() * 0.02s); 
-    }
-
-
+  #burgermenu[popover] li {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.2s ease-in-out;
+    transition-delay: calc(sibling-index() * 0.02s);
+  }
 </style>
 <!-- Pure CSS Exit & Entry Animations -->
+
 <body class="bg-white ">
   <div id="tracker" class="absolute left-[50%] -translate-x-[50%] text-sm z-4 opacity-0">
     0%
@@ -321,6 +366,11 @@
   <div id="main"
     class="relative h-screen overflow-y-auto overflow-x-clip bg-[url(assets/background-v3-blank.png)] bg-local bg-cover bg-center font-[Epilogue]">
 
+    <div id="layer-1" class="sticky top-0">
+      <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 left-0 rotate-180"></div>
+      <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 right-0 -rotate-90"></div>
+    </div>
+
     <div id="section-home" style="text-wrap:balance;"
       class=" h-screen top-0 border-red-600 sticky flex flex-col justify-center text-center text-white/80 ">
 
@@ -335,29 +385,32 @@
       </p>
 
     </div>
-
-    <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 left-0 rotate-180"></div>
-    <div class="absolute  size-60 md:size-70 bg-[url(assets/pngwing1.png)] top-0 right-0 -rotate-90"></div>
+   
 
     <div id="scroller"
       class="z-10 h-screen translate-y-3 md:h-300 relative  bg-linear-to-b from-transparent from-30% to-gray-100 to-60% opacity-100">
-      
-      <div id="layer-1">
-        <img class="absolute -top-40 md:-top-66 right-0 scale-150 md:scale-none" src="./src/assets/pngwing6.png" alt="">
-        <img class="absolute -right-10 md:-top-66 md:-right-170 scale-200 md:scale-none" src="./src/assets/pngwing6.png" alt="">
-        <img class="absolute md:-left-60 md:top-0 top-20 -left-20 rotate-y-180 scale-200 md:scale-none" src="./src/assets/pngwing6.png" alt="">
-      </div>
-        
-      <img class=" absolute hidden md:block md:-top-40 w-full scale-200 md:scale-none" src="./src/assets/cloudblocker-v4.png" alt="">
-      <img class=" absolute -left-30 md:-left-180 top-40" src="./src/assets/pngwing2.png" alt="">
 
-      <div id="layer-3">
-        <img class="absolute scale-200 md:scale-none top-70 md:top-90" src="./src/assets/pngwing8-v2.png" alt="">
-        <img class="absolute scale-200 md:scale-none top-70 md:top-90 -left-40 md:-left-150" src="./src/assets/pngwing8-v2.png" alt="">
-        <img class="absolute scale-200 md:scale-none top-70 md:top-90 -right-40 md:-right-80" src="./src/assets/pngwing8-v2.png" alt="">
+      <div id="layer-2" class="layer">
+        <img class="absolute -top-40 md:-top-66 right-0 scale-150 md:scale-none" src="./src/assets/pngwing6.png" alt="">
+        <img class="absolute -right-10 md:-top-66 md:-right-170 scale-200 md:scale-none" src="./src/assets/pngwing6.png"
+          alt="">
+        <img class="absolute md:-left-60 md:top-0 top-20 -left-20 rotate-y-180 scale-200 md:scale-none"
+          src="./src/assets/pngwing6.png" alt="">
       </div>
-        
-    
+
+      <div id="layer-3" class="layer">
+        <img class=" absolute hidden md:block md:-top-40 w-full scale-200 md:scale-none"
+          src="./src/assets/cloudblocker-v4.png" alt="">
+        <img class=" absolute -left-30 md:-left-180 top-40" src="./src/assets/pngwing2.png" alt="">
+
+        <img class="absolute scale-200 md:scale-none top-70 md:top-90" src="./src/assets/pngwing8-v2.png" alt="">
+        <img class="absolute scale-200 md:scale-none top-70 md:top-90 -left-40 md:-left-150"
+          src="./src/assets/pngwing8-v2.png" alt="">
+        <img class="absolute scale-200 md:scale-none top-70 md:top-90 -right-40 md:-right-80"
+          src="./src/assets/pngwing8-v2.png" alt="">
+      </div>
+
+
     </div>
 
     <div id="section-tv" class="sticky h-screen
@@ -386,4 +439,5 @@
   <!-- Simple Analytics - 100% privacy-first analytics -->
   <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
+
 </html>
