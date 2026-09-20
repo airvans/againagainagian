@@ -8,6 +8,8 @@ const audio = document.getElementById("audio")
 const muteagent = document.getElementById("slidecheck")
 
 
+
+
 const checkedpopup = document
   .getElementById("item-achievement")
   ?.querySelector("input");
@@ -86,14 +88,15 @@ function showachievement(name, text, img) {
 
   Toastify({
     text:`${name}\n`,
-    duration: 4000,
+    duration:4000,
     stopOnFocus: true,
-    className:`text-xs p-40 before:right-3 before:content-[''] before:size-9 before:rounded-md before:absolute after:text-gray-800 after:text-sm after:font-light`,
+    className:`text-xs p-40  before:right-3 before:content-[''] before:size-9 before:rounded-md before:absolute after:text-gray-800 after:text-sm after:font-light`,
     style:{
       background: "white",
       width: "350px",
       height: "60px",
       color: "gray",
+      maxWidth: "700px",
     }
   }).showToast();
 
